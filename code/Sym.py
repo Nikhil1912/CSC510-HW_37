@@ -14,3 +14,14 @@ class Sym:
         if value != "?":
             self.num_items += 1
             self.has[value] += 1
+
+    # Calculates the mode, most common symbol
+    def mid(self):
+        mode = None
+        most = -1
+        for key in self.has:
+            sym_count = self.has[key]
+            if sym_count > most:
+                most = sym_count
+                mode = key
+        return mode

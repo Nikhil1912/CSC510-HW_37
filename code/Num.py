@@ -11,4 +11,4 @@ class Num:
         self.lo = math.inf                                  # lowest seen
         self.hi = -math.inf                                 # highest seen
         self.is_sorted = True                               # no updates since last sort of data
-        self.w = 1 if col_name and col_name[-1] == '+' else -1
+        self.w = 1 if col_name and col_name[-1] == '+' else -1      # maximize or minimize column

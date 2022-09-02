@@ -12,3 +12,11 @@ class Num:
         self.hi = -math.inf                                 # highest seen
         self.is_sorted = True                               # no updates since last sort of data
         self.w = 1 if col_name and col_name[-1] == '+' else -1      # maximize or minimize column
+
+    # Get the stored numbers in a sorted order
+    def nums(self):
+        if not self.is_sorted:
+            self.has.sort()
+            self.is_sorted = True
+        
+        return self.has

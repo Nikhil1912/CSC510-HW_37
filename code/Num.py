@@ -1,4 +1,5 @@
 import math
+from typing import OrderedDict
 
 
 # Num summarizes a stream of numbers
@@ -16,7 +17,7 @@ class Num:
     # Get the stored numbers in a sorted order
     def nums(self):
         if not self.is_sorted:
-            self.has.sort()
+            self.has = OrderedDict(sorted(self.has.items()))
             self.is_sorted = True
         
         return self.has

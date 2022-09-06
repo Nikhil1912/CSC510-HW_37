@@ -21,8 +21,8 @@ class Sym:
         def fun(p):
             return p*math.log(p,2)
         
-        for value in self.has:
-            if self.has[value] > 0:
-                e = e - fun(self.has[value]/self.num_items) 
+        for n in self.has.values():
+            if n > 0:
+                e = e - fun(n/self.num_items) 
         
         return e

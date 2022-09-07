@@ -1,5 +1,6 @@
 # Sym's summarize a stream of symbols.
 from collections import defaultdict
+import math
 
 
 class Sym:
@@ -25,3 +26,14 @@ class Sym:
                 most = sym_count
                 mode = key
         return mode
+
+    # Calculate diversity, which is entropy in the case of Sym
+    def div(self, e=0):
+        def fun(p):
+            return p*math.log(p,2)
+        
+        for n in self.has.values():
+            if n > 0:
+                e = e - fun(n/self.num_items) 
+        
+        return e

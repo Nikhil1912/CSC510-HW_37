@@ -55,5 +55,7 @@ class Num:
     def mid(self):
         if not self.is_sorted:  # If the dictionary is not already sorted, sort it using nums
             self.nums()
-        med_position = math.floor(self.num_items/2)  # To find the median position key, halve the length of the OD and take the floor
-        return self.has.items()[med_position]  # Return the median (middle) value of the sorted dictionary
+        med_position = math.floor(len(self.has.keys())/2)  # To find where the median value is, divide the number of keys in the dictionary by 2 and take the floor
+        return [key for key in self.has.keys()][med_position]  # Return the median (middle) value of the key in the sorted dictionary
+        # The above assumes that the key is what is being returned; if this is not the case, and it should return the values, use the following:
+        # return [value for value in self.has.values()][med_position]

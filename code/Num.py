@@ -40,7 +40,7 @@ class Num:
                     self.has[value] += 1
                 else:
                     self.has[value] = 1
-            elif random.random() < the_nums/self.num_items:
+            elif random.random() < the_nums / self.num_items:
                 ele = random.choice(list(self.has.keys()))
                 self.is_sorted = False
                 self.has[ele] -= 1
@@ -50,3 +50,12 @@ class Num:
                     self.has[value] += 1
                 else:
                     self.has[value] = 1
+
+    # Central tendency; for Nums, this is median
+    def mid(self):
+        if not self.is_sorted:  # If the dictionary is not already sorted, sort it using nums
+            self.nums()
+        med_position = math.floor(len(self.has.keys())/2)  # To find where the median value is, divide the number of keys in the dictionary by 2 and take the floor
+        return [key for key in self.has.keys()][med_position]  # Return the median (middle) value of the key in the sorted dictionary
+        # The above assumes that the key is what is being returned; if this is not the case, and it should return the values, use the following:
+        # return [value for value in self.has.values()][med_position]

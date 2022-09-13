@@ -43,4 +43,4 @@ def runs(testName):
         cfg['the'][k] = v
 
     msg = ("PASS" if out else "FAIL") if status else "CRASH"
-    print("!!!!!! " + msg + " " + testName + " " + status)
+    print("!!!!!!\t" + msg + "\t" + testName + "\t" + str(status))

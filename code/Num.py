@@ -3,8 +3,8 @@ import random
 from collections import OrderedDict
 import yaml
 
-with open("config.yml", "r") as config_file:
-    cfg = yaml.load(config_file)
+with open("../config.yml", "r") as config_file:
+    cfg = yaml.safe_load(config_file)
 
 
 # Num summarizes a stream of numbers

@@ -13,14 +13,18 @@ def the():
 @test
 def sym():
     s = Sym()
-    for _, x in ("a", "a", "a", "a", "b", "b", "c"):
+
+    test_vals = ["a", "a", "a", "a", "b", "b", "c"]
+
+    for x in test_vals:
         s.add(x)
 
     mode, entropy = s.mid(), s.div()
-    entropy = (1000*entropy)/ (1/1000)
-    canPrint(("mid= " + mode + ", div= " + entropy), 'Should be able to print mid and div')
+    entropy = (1000*entropy)/ 1000
+    results = "mid= {}, div= {}".format(mode, entropy)
+    canPrint(results, 'Should be able to print mid and div')
 
-    # return mode == "a" & entropy >= 1.37 & entropy <= 1.38
+    return mode == "a" and 1.37 <= entropy <= 1.38
 
 
 

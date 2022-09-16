@@ -1,3 +1,5 @@
+import math
+
 from TestEngine import test, runs
 from TestUtils import canPrint
 from Sym import Sym
@@ -20,7 +22,7 @@ def sym():
         s.add(x)
 
     mode, entropy = s.mid(), s.div()
-    entropy = (1000*entropy)/ 1000
+    entropy = math.floor(entropy)
     results = "mid= {}, div= {}".format(mode, entropy)
     canPrint(results, 'Should be able to print mid and div')
 

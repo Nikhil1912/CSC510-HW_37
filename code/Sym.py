@@ -8,7 +8,7 @@ class Sym:
         self.num_items = 0                                  # items seen
         self.col_position = col_position                    # column position
         self.col_name = col_name                            # column name
-        self.has = defaultdict(0)                           # kept data
+        self.has = defaultdict(int)                           # kept data
 
     # Add symbol value to Sym object
     def add(self, value):

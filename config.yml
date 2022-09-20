@@ -1,4 +1,4 @@
 the:
-  nums: 512,
-  seed: 100,
-  dump: False
+  nums: 512
+  seed: 100
+  dump: True

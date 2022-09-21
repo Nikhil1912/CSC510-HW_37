@@ -41,12 +41,20 @@ def num():
 
     return 50 <= mid <= 52 and 30.5 < div < 32
 
+@test
+def bignum():
+    num = Num()
+    cfg["the"]['nums'] = 32
 
-
-
-
+    for i in range(1000):
+        num.add(i)
+    canPrint(num.nums(), 'Should be able to print nums')
+    return len(num.has) == 32
 
 if __name__ == "__main__":
     runs('the')
+    runs('bignum')
     runs('sym')
     runs('num')
+
+

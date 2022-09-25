@@ -18,7 +18,9 @@ class Data:
         # Filler code this is TODO
         self.cols = xs
 
-    # Rounding numbers to 'places'
+    # Rounding numbers to 'places' (default=2)
+    # For showCols, default = self.cols.y
+    # No defaults for fun
     def stats(self, places, showCols, fun):
         if not showCols:
             showCols = self.cols.y

@@ -13,6 +13,6 @@ class ProcessCsv:
         # TODO
 
 
-def rnd(x, places):
-    mult = 10**places if places else 10**2
+def rnd(x, places=2):
+    mult = 10**places
     return math.floor(x * mult + 0.5) / mult

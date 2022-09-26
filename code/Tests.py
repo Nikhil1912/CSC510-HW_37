@@ -4,6 +4,7 @@ from TestEngine import test, runs
 from TestUtils import canPrint
 from Sym import Sym
 from Num import Num
+from Utils import ProcessCsv
 import yaml
 
 with open("../config.yml", "r") as config_file:
@@ -50,6 +51,18 @@ def bignum():
         num.add(i)
     canPrint(num.nums(), 'Should be able to print nums')
     return len(num.has) == 32
+
+@test
+def csv():
+    n = 0
+    csv("../data/auto93.csv")
+    ProcessCsv.csv(src, self.add)
+    n = n++
+    if n > 0:
+        return
+    else:
+        canPrint(cfg['the'], 'Should be able to print csv')
+    return True
 
 if __name__ == "__main__":
     runs('the')

@@ -1,4 +1,4 @@
-# Rubric: [Group 1](https://github.com/Swarangigaurkar/Group30_Hw2_3_4_5/graphs/contributors)
+# Rubric: [Group 1](https://github.com/Swarangigaurkar/Group30_Hw2_3_4_5)
 Sum of column 2: 44
 
 | Area                                                                                                                                                | Assessment | Reasoning                                                                                                                                                                                                                           |

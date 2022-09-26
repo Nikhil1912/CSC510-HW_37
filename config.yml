@@ -1,4 +1,7 @@
 the:
+  dump: True
+  file: "examplecsv.csv"
+  help: False
   nums: 512
   seed: 100
-  dump: True
+  seperator: ","

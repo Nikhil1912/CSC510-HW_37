@@ -1,10 +1,11 @@
 from Utils import ProcessCsv
+import Cols
 
 # Holds rows and their summaries in Cols.
 class Data:
     def __init__(self, src):
         self.cols = None            #Summaries of data
-        self.rows = {}              #Kept data
+        self.rows = []              #Kept data
 
         if src:
             ProcessCsv.csv(src, self.add)       #If string name do IO on csv file and send pass the add row func
@@ -14,6 +15,10 @@ class Data:
 
     def add(self, xs):
         # Filler code this is TODO
-        self.cols = xs
+        if self.cols is None:
+            self.cols = Cols(xs)
+        else:
+            self.rows.append(xs)
+
 
 

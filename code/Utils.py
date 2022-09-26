@@ -6,7 +6,7 @@ class TestError(Exception):
         self.mess = mess
 
 
-class ProcessCsv:
+class ProcessCsv: # not completed; TODO
     # csv reads each line of a text file,
     # divides on an operator (here, a comma),
     # removes leading/trailing white space,

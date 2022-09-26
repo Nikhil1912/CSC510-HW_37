@@ -3,6 +3,8 @@ Sum of column 2: X
 
 | Area                                                                                                                                               | Assessment | Reasoning |
 |----------------------------------------------------------------------------------------------------------------------------------------------------|------------|-----------|
+| Video 1                                                                                                                                            |            |           |
+| Video 2                                                                                                                                            |            |           |
 | Workload is spread over whole team                                                                                                                 |            |           |
 | Everyone is contributing                                                                                                                           |            |           |
 | Number of commits                                                                                                                                  |            |           |
@@ -37,6 +39,8 @@ Sum of column 2: X
 
 | Area                                                                                                                                               | Assessment | Reasoning |
 |----------------------------------------------------------------------------------------------------------------------------------------------------|------------|-----------|
+| Video 1                                                                                                                                            |            |           |
+| Video 2                                                                                                                                            |            |           |
 | Workload is spread over whole team                                                                                                                 |            |           |
 | Everyone is contributing                                                                                                                           |            |           |
 | Number of commits                                                                                                                                  |            |           |
@@ -71,6 +75,8 @@ Sum of column 2: X
 
 | Area                                                                                                                                               | Assessment | Reasoning |
 |----------------------------------------------------------------------------------------------------------------------------------------------------|------------|-----------|
+| Video 1                                                                                                                                            |            |           |
+| Video 2                                                                                                                                            |            |           |
 | Workload is spread over whole team                                                                                                                 |            |           |
 | Everyone is contributing                                                                                                                           |            |           |
 | Number of commits                                                                                                                                  |            |           |
@@ -105,6 +111,8 @@ Sum of column 2: X
 
 | Area                                                                                                                                               | Assessment | Reasoning |
 |----------------------------------------------------------------------------------------------------------------------------------------------------|------------|-----------|
+| Video 1                                                                                                                                            |            |           |
+| Video 2                                                                                                                                            |            |           |
 | Workload is spread over whole team                                                                                                                 |            |           |
 | Everyone is contributing                                                                                                                           |            |           |
 | Number of commits                                                                                                                                  |            |           |
@@ -139,6 +147,8 @@ Sum of column 2: X
 
 | Area                                                                                                                                               | Assessment | Reasoning |
 |----------------------------------------------------------------------------------------------------------------------------------------------------|------------|-----------|
+| Video 1                                                                                                                                            |            |           |
+| Video 2                                                                                                                                            |            |           |
 | Workload is spread over whole team                                                                                                                 |            |           |
 | Everyone is contributing                                                                                                                           |            |           |
 | Number of commits                                                                                                                                  |            |           |

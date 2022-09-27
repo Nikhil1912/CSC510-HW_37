@@ -1,19 +1,21 @@
 import math
 
-from TestEngine import test, runs
+import TestEngine
 from TestUtils import canPrint
 from Sym import Sym
 from Num import Num
 import yaml
+import sys
 
 with open("../config.yml", "r") as config_file:
     cfg = yaml.safe_load(config_file)
 
-@test
+@TestEngine.test
 def the():
     canPrint(cfg['the'], 'Should be able to print the')
+    return True
 
-@test
+@TestEngine.test
 def sym():
     s = Sym()
 
@@ -29,7 +31,7 @@ def sym():
 
     return mode == "a" and 1.37 <= entropy <= 1.38
 
-@test
+@TestEngine.test
 def num():
     n = Num()
     for x in range(1, 1000):
@@ -41,7 +43,7 @@ def num():
 
     return 50 <= mid <= 52 and 30.5 < div < 32
 
-@test
+@TestEngine.test
 def bignum():
     num = Num()
     cfg["the"]['nums'] = 32
@@ -51,10 +53,15 @@ def bignum():
     canPrint(num.nums(), 'Should be able to print nums')
     return len(num.has) == 32
 
+@TestEngine.test
+def ALL():
+    for k in TestEngine.eg:
+        if k != "ALL":
+            print("\n−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−")
+            if not TestEngine.runs(k):
+                TestEngine.fails += 1
+    return True
+
 if __name__ == "__main__":
-    runs('the')
-    runs('bignum')
-    runs('sym')
-    runs('num')
-
-
+    TestEngine.runs(cfg["the"]["eg"])
+    sys.exit(TestEngine.fails)

@@ -15,8 +15,7 @@ def test(fn):
     @functools.wraps(fn)
     def wrapper(*args, **kwargs):
         try:
-            fn(*args,**kwargs)
-            return True
+            return fn(*args,**kwargs)
         except TestError as te:
             return False
     eg[wrapper.__name__] = wrapper

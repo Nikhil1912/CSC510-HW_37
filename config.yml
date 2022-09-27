@@ -2,3 +2,4 @@ the:
   nums: 512
   seed: 100
   dump: True
+  eg: ALL

@@ -25,7 +25,7 @@ def sym():
         s.add(x)
 
     mode, entropy = s.mid(), s.div()
-    entropy = math.floor(entropy)
+    entropy = math.floor(entropy*1000)/1000
     results = "mid= {}, div= {}".format(mode, entropy)
     canPrint(results, 'Should be able to print mid and div')
 

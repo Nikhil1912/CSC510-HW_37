@@ -5,3 +5,4 @@ the:
   nums: 512
   seed: 100
   separator: ','
+  eg: ALL

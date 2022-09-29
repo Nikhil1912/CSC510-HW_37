@@ -5,42 +5,38 @@ import functools
 import yaml
 import random
 from Utils import TestError
+import Common
 
-with open("../config.yml", "r") as config_file:
-    cfg = yaml.safe_load(config_file)
-
-eg = {}
 
 def test(fn):
     @functools.wraps(fn)
     def wrapper(*args, **kwargs):
         try:
-            fn(*args,**kwargs)
-            return True
+            return fn(*args,**kwargs)
         except TestError as te:
             return False
-    eg[wrapper.__name__] = wrapper
+    Common.eg[wrapper.__name__] = wrapper
     return wrapper
 
 def runs(testName):
-    if testName not in eg:
+    if testName not in Common.eg:
         return
-    random.seed(cfg['the']['seed'])
+    random.seed(Common.cfg['the']['seed'])
     old = {}
-    for k, v in cfg['the'].items():
+    for k, v in Common.cfg['the'].items():
         old[k] = v
 
     status = True
-    if cfg['the']['dump']:
-        out = eg[testName]()
+    if Common.cfg['the']['dump']:
+        out = Common.eg[testName]()
     else:
         try:
-            out = eg[testName]()
+            out = Common.eg[testName]()
         except:
             status = False
 
     for k, v in old.items():
-        cfg['the'][k] = v
+        Common.cfg['the'][k] = v
 
     msg = ("PASS" if out else "FAIL") if status else "CRASH"
     print("!!!!!!\t" + msg + "\t" + testName + "\t" + str(status))

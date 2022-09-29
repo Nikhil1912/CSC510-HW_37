@@ -1,18 +1,15 @@
 import math
-
+import Common
 import TestEngine
 from TestUtils import canPrint
 from Sym import Sym
 from Num import Num
-import yaml
 import sys
-
-with open("../config.yml", "r") as config_file:
-    cfg = yaml.safe_load(config_file)
+import Common
 
 @TestEngine.test
 def the():
-    canPrint(cfg['the'], 'Should be able to print the')
+    canPrint(Common.cfg['the'], 'Should be able to print the')
     return True
 
 @TestEngine.test
@@ -46,7 +43,7 @@ def num():
 @TestEngine.test
 def bignum():
     num = Num()
-    cfg["the"]['nums'] = 32
+    Common.cfg["the"]['nums'] = 32
 
     for i in range(1000):
         num.add(i)
@@ -55,13 +52,13 @@ def bignum():
 
 @TestEngine.test
 def ALL():
-    for k in TestEngine.eg:
+    for k in Common.eg:
         if k != "ALL":
             print("\n−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−")
             if not TestEngine.runs(k):
-                TestEngine.fails += 1
+                Common.fails += 1
     return True
 
 if __name__ == "__main__":
-    TestEngine.runs(cfg["the"]["eg"])
-    sys.exit(TestEngine.fails)
+    TestEngine.runs(Common.cfg["the"]["eg"])
+    sys.exit(Common.fails)

@@ -1,0 +1,21 @@
+Index: code/Data.py
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+>from Utils import ProcessCsv\n\n# Holds rows and their summaries in Cols.\nclass Data:\n    def __init__(self, src):\n        self.cols = None            #Summaries of data\n        self.rows = {}              #Kept data\n\n        if src:\n            ProcessCsv.csv(src, self.add)       #If string name do IO on csv file and send pass the add row func\n        else:\n            for _, row in src:                  #Else given rows so no processing just add\n                self.add(row)\n\n    def add(self, xs):\n        # Filler code this is TODO\n        self.cols = xs\n\n\n
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/code/Data.py b/code/Data.py
+--- a/code/Data.py	(revision 32f76c5fd96792324e372a500d46deacf29abae5)
++++ b/code/Data.py	(date 1664123725389)
+@@ -1,4 +1,5 @@
+ from Utils import ProcessCsv
++import numbers
+ 
+ # Holds rows and their summaries in Cols.
+ class Data:
+@@ -17,3 +18,4 @@
+         self.cols = xs
+ 
+ 
++

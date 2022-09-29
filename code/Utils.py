@@ -20,35 +20,47 @@ def rnd(x, places=2):
 
 
 def cli(args, configs):
+    arg_arr = args.split(" ")
 
-    for x in range(0, len(args), 2):
-        if args[x] == "-e":
-            call(["python", "your_file.py"])
+    run_tests = False
+    if '-e' in arg_arr:
+        run_tests = True
+        arg_arr.remove("-e")
+
+    for x in range(0, len(arg_arr), 2):
+        if arg_arr[x] == "-d":
+            if arg_arr[x + 1] == 'True' or arg_arr[x + 1] == 'true':
+                configs['the']['dump'] = True
+            else:
+                configs['the']['dump'] = False
             continue
-        elif args[x] == "-d":
-            configs['the'][0]['dump'] = args[x + 1]
+        elif arg_arr[x] == "-f":
+            configs['the']['file'] = str(arg_arr[x + 1])
             continue
-        elif args[x] =="-f":
-            configs['the'][0]['file'] = args[x + 1]
+        elif arg_arr[x] == "-h":
+            if arg_arr[x + 1] == 'True' or arg_arr[x + 1] == 'true':
+                configs['the']['help'] = True
+            else:
+                configs['the']['help'] = False
             continue
-        elif args[x] == "-h":
-            configs['the'][0]['help'] = args[x + 1]
+        elif arg_arr[x] == "-n":
+            configs['the']['nums'] = int(arg_arr[x + 1])
             continue
-        elif args[x] == "-n":
-            configs['the'][0]['nums'] = args[x + 1]
+        elif arg_arr[x] == "-s":
+            configs['the']['seed'] = int(arg_arr[x + 1])
             continue
-        elif args[x] == "-s":
-            configs['the'][0]['seed'] = args[x + 1]
+        elif arg_arr[x] == "-S":
+            configs['the']['separator'] = str(arg_arr[x + 1])
             continue
-        elif args[x] == "-S":
-            configs['the'][0]['separator'] = args[x + 1]
-            continue
-        elif args[x] == "-q":
+        elif arg_arr[x] == "-q":
             print("Exiting.")
             exit()
         else:
             print(args[x], " is not a valid option. Exiting.")
             exit()
+
+    if run_tests:
+        call(["python", "Tests.py"])
 
     return configs
 

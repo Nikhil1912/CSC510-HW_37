@@ -1,7 +1,7 @@
 the:
-  dump: True
-  file: "examplecsv.csv"
-  help: False
+  dump: true
+  file: examplecsv.csv
+  help: true
   nums: 512
   seed: 100
-  seperator: ","
+  separator: ','

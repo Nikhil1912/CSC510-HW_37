@@ -45,10 +45,11 @@ class Num:
     def mid(self):
         if not self.is_sorted:  # If the dictionary is not already sorted, sort it using nums
             self.nums()
-        med_position = math.floor(len(self.has)/2)  # To find where the median value is, divide the number of keys in the dictionary by 2 and take the floor
+        med_position = math.floor(len(self.has)/2)  # To find where the median value is, divide the number of keys in
+        # the dictionary by 2 and take the floor
         return self.has[med_position]  # Return the median (middle) value of the key in the sorted dictionary
-        # The above assumes that the key is what is being returned; if this is not the case, and it should return the values, use the following:
-        # return [value for value in self.has.values()][med_position]
+        # The above assumes that the key is what is being returned; if this is not the case, and it should return the
+        # values, use the following: return [value for value in self.has.values()][med_position]
 
     # Diversity; for Nums, this is standard deviation
     def div(self):
@@ -57,7 +58,10 @@ class Num:
         a = self.has # for simplicity in later lines and to better reflect the lua code
         ninetieth_percentile_position = math.floor(len(self.has)*0.9)  # The position of the 90th percentile in the OD
         tenth_percentile_position = math.floor(len(self.has)*0.1)  # The position of the 10th percentile in the OD
-        ninetieth_percentile_value = [key for key in a][ninetieth_percentile_position] # The value of the key at the 90th percentile
-        tenth_percentile_value = [key for key in a][tenth_percentile_position] # The value of the key at the 10th percentile
-        return (ninetieth_percentile_value-tenth_percentile_value)/2.58  # Return the standard deviation, as defined in the original lua code (line 195)
+        ninetieth_percentile_value = [key for key in a][ninetieth_percentile_position] # The value of the key at the
+        # 90th percentile
+        tenth_percentile_value = [key for key in a][tenth_percentile_position] # The value of the key at the 10th
+        # percentile
+        return (ninetieth_percentile_value-tenth_percentile_value)/2.58  # Return the standard deviation, as defined
+        # in the original lua code (line 195)
 

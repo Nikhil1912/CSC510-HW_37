@@ -46,7 +46,3 @@ class Data:
             else:
                 t[col.name] = v
         return t
-
-r = Row()
-d = Data()
-d.add(r())

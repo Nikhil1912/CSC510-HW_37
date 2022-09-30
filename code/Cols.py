@@ -1,6 +1,8 @@
 import re
 from Sym import Sym
 from Num import Num
+import Common
+
 
 
 # Holds summaries of columns

@@ -30,7 +30,7 @@ class Data:
             self.rows.append(row)
             for todo in [self.cols.x, self.cols.y]:
                 for col in todo:
-                    col.add(row["cells"][col.c])
+                    col.add(row["cells"][col.col_position])
 
     # Rounding numbers to 'places' (default=2)
     # For showCols, default = self.cols.y

@@ -1,6 +1,12 @@
 from Utils import ProcessCsv, rnd
 import numbers
+import Row
+import yaml
+import Cols
+import Common
 
+with open("../config.yml",'r') as config_file:
+    cfg = yaml.safe_load(config_file)
 
 # Holds rows and their summaries in Cols.
 class Data:
@@ -14,9 +20,17 @@ class Data:
             for _, row in src:  # Else given rows so no processing just add
                 self.add(row)
 
-    def add(self, xs):
-        # Filler code this is TODO
-        self.cols = xs
+    
+    def add(self, xs: Row):
+
+        if not self.cols:
+            self.cols = Cols(xs) 
+        else:
+            row = xs if type(xs)==Row else Row(xs)    
+            self.rows.append(row)
+            for todo in [self.cols.x, self.cols.y]:
+                for col in todo:
+                    col.add(row["cells"][col.col_position])
 
     # Rounding numbers to 'places' (default=2)
     # For showCols, default = self.cols.y

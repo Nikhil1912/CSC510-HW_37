@@ -1,4 +1,6 @@
 # CSC510-HW_37
+[![DOI](https://zenodo.org/badge/545583203.svg)](https://zenodo.org/badge/latestdoi/545583203)
+
 <a href="https://github.com/Nikhil1912/CSC510-HW_37/main/LICENSE.md"><img src="https://img.shields.io/github/license/Nikhil1912/CSC510-HW_37?style=plastic" /></a>
 
 The objective of this repo is to replicate, in python, [this code](https://github.com/txt/se22/blob/main/etc/pdf/csv.pdf), which was originally written in Lua. 

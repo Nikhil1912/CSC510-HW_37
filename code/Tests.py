@@ -93,9 +93,13 @@ def eg_stats():
             return Sym.mid(col)
 
     data = Data('../data/auto93.csv')
+    print('xmid', end='\t')
     canPrint(data.stats(2, data.cols.x, mid), 'xmid')
+    print('xdiv', end='\t')
     canPrint(data.stats(3, data.cols.x, div), 'xdiv')
+    print('ymid', end='\t')
     canPrint(data.stats(2, data.cols.y, mid), 'ymid')
+    print('ydiv', end='\t')
     canPrint(data.stats(3, data.cols.x, div), 'ydiv')
     return True
 

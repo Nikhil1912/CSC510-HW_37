@@ -59,7 +59,7 @@ def eg_bignum():
 
 @TestEngine.test
 def eg_data():
-    d = Data('../data/auto93.csv')
+    d = Data('data/auto93.csv')
     for col in d.cols.y:
         canPrint(col, "Should be able to print columns")
     return True
@@ -74,7 +74,7 @@ def eg_csv():
         canPrint(row, 'Should be able to print rows')
 
     fun.n = 0
-    csv('../data/auto93.csv', fun)
+    csv('data/auto93.csv', fun)
     return True
 
 
@@ -92,7 +92,7 @@ def eg_stats():
         else:
             return Sym.mid(col)
 
-    data = Data('../data/auto93.csv')
+    data = Data('data/auto93.csv')
     print('xmid', end='\t')
     canPrint(data.stats(2, data.cols.x, mid), 'xmid')
     print('xdiv', end='\t')

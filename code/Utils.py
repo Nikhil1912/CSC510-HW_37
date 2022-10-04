@@ -4,7 +4,7 @@ import yaml
 from subprocess import call
 import Common
 
-with open("../config.yml", "r") as config_file:
+with open("config.yml", "r") as config_file:
     configs = yaml.safe_load(config_file)
 
 passer = ""

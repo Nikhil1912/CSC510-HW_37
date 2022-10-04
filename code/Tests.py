@@ -1,11 +1,12 @@
 import math
+import sys
+
 import Common
 import TestEngine
-from TestUtils import canPrint
-from Sym import Sym
+from Data import Data
 from Num import Num
-import sys
-import Common
+from Sym import Sym
+from TestUtils import canPrint
 
 
 @TestEngine.test
@@ -53,6 +54,14 @@ def bignum():
         num.add(i)
     canPrint(num.nums(), 'Should be able to print nums')
     return len(num.has) == 32
+
+
+@TestEngine.test
+def data():
+    d = Data('../data/auto93.csv')
+    for col in d.cols.y:
+        canPrint(col, "Should be able to print columns")
+    return True
 
 
 @TestEngine.test

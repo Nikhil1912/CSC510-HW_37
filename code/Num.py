@@ -15,6 +15,18 @@ class Num:
         self.is_sorted = True  # no updates since last sort of data
         self.w = 1 if col_name and col_name[-1] == '+' else -1  # maximize or minimize column
 
+    #Get the string representation of the object
+    def __str__(self):
+        toPrintList = []
+        toPrintList.append("at: " + str(self.col_position))
+        toPrintList.append("hi: " + str(self.hi))
+        toPrintList.append("isSorted: " + str(self.is_sorted))
+        toPrintList.append("lo: " + str(self.lo))
+        toPrintList.append("n: " + str(self.num_items))
+        toPrintList.append("name: " + str(self.col_name))
+        toPrintList.append("w: " + str(self.w))
+        return str(toPrintList)
+
     # Get the stored numbers in a sorted order
     def nums(self):
         if not self.is_sorted:

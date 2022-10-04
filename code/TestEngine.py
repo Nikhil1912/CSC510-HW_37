@@ -44,3 +44,4 @@ def runs(testName):
     if testName != 'ALL':
         testName = testName[3:]
     print("!!!!!!\t" + msg + "\t" + testName + "\t" + str(status))
+    return status

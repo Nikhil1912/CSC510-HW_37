@@ -37,6 +37,7 @@ jobs:
         run: |
           pip install pdoc
           python -m pdoc ./code/Tests.py -o ./docs/pages
+          python -m pdoc ./code/Csv.py -o ./docs/pages
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v1
         with:

@@ -4,7 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="51a57ff1-89d0-4f47-8b94-6031d58c1e95" name="Changes" comment="Implemented eg:data(), fixed a lot of bugs in csv(), data() and cols(), added the auto93.csv file for testing." />
+    <list default="true" id="51a57ff1-89d0-4f47-8b94-6031d58c1e95" name="Changes" comment="Implemented eg:data(), fixed a lot of bugs in csv(), data() and cols(), added the auto93.csv file for testing.">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/code/Tests.py" beforeDir="false" afterPath="$PROJECT_DIR$/code/Tests.py" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />

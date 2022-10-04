@@ -6,6 +6,7 @@ import TestEngine
 from Data import Data
 from Num import Num
 from Sym import Sym
+from Utils import csv
 from TestUtils import canPrint
 
 
@@ -61,6 +62,19 @@ def data():
     d = Data('../data/auto93.csv')
     for col in d.cols.y:
         canPrint(col, "Should be able to print columns")
+    return True
+
+
+@TestEngine.test
+def eg_csv():
+    def fun(row):
+        fun.n += 1
+        if fun.n > 10:
+            return
+        canPrint(row, 'Should be able to print rows')
+
+    fun.n = 0
+    csv('../data/auto93.csv', fun)
     return True
 
 

@@ -196,6 +196,6 @@
     <option name="LAST_COMMIT_MESSAGE" value="Implemented eg:data(), fixed a lot of bugs in csv(), data() and cols(), added the auto93.csv file for testing." />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
-    <SUITE FILE_PATH="coverage/CSC510_HW_37$Tests.coverage" NAME="Tests Coverage Results" MODIFIED="1664901180698" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/code" />
+    <SUITE FILE_PATH="coverage/CSC510_HW_37$Tests.coverage" NAME="Tests Coverage Results" MODIFIED="1664906224140" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/code" />
   </component>
 </project>

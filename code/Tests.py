@@ -11,13 +11,13 @@ from TestUtils import canPrint
 
 
 @TestEngine.test
-def the():
+def eg_the():
     canPrint(Common.cfg['the'], 'Should be able to print the')
     return True
 
 
 @TestEngine.test
-def sym():
+def eg_sym():
     s = Sym()
 
     test_vals = ["a", "a", "a", "a", "b", "b", "c"]
@@ -34,7 +34,7 @@ def sym():
 
 
 @TestEngine.test
-def num():
+def eg_num():
     n = Num()
     for x in range(1, 101):
         n.add(x)
@@ -47,7 +47,7 @@ def num():
 
 
 @TestEngine.test
-def bignum():
+def eg_bignum():
     num = Num()
     Common.cfg["the"]['nums'] = 32
 
@@ -58,7 +58,7 @@ def bignum():
 
 
 @TestEngine.test
-def data():
+def eg_data():
     d = Data('../data/auto93.csv')
     for col in d.cols.y:
         canPrint(col, "Should be able to print columns")
@@ -75,6 +75,28 @@ def eg_csv():
 
     fun.n = 0
     csv('../data/auto93.csv', fun)
+    return True
+
+
+@TestEngine.test
+def eg_stats():
+    def div(col):
+        if type(col) == Num:
+            return Num.div(col)
+        else:
+            return Sym.div(col)
+
+    def mid(col):
+        if type(col) == Num:
+            return Num.mid(col)
+        else:
+            return Sym.mid(col)
+
+    data = Data('../data/auto93.csv')
+    canPrint(data.stats(2, data.cols.x, mid), 'xmid')
+    canPrint(data.stats(3, data.cols.x, div), 'xdiv')
+    canPrint(data.stats(2, data.cols.y, mid), 'ymid')
+    canPrint(data.stats(3, data.cols.x, div), 'ydiv')
     return True
 
 

@@ -40,11 +40,11 @@ class Data:
         if not showCols:
             showCols = self.cols.y
         t = {}
-        for _, col in showCols:
+        for col in showCols:
             v = fun(col)
             if isinstance(v, numbers.Number):
-                t[col.name] = rnd(v, places)
+                t[col.col_name] = rnd(v, places)
             else:
-                t[col.name] = v
+                t[col.col_name] = v
         return t
 

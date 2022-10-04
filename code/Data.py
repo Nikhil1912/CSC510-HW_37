@@ -32,6 +32,7 @@ class Data:
                 for col in todo:
                     col.add(row["cells"][col.col_position])
 
+
     # Rounding numbers to 'places' (default=2)
     # For showCols, default = self.cols.y
     # No defaults for fun
@@ -46,3 +47,7 @@ class Data:
             else:
                 t[col.name] = v
         return t
+
+r = Row()
+d = Data()
+d.add(r())

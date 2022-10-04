@@ -6,9 +6,9 @@ with open("../config.yml", "r") as config_file:
 
 print("Welcome to csv summary!")
 print("Help \n USAGE EX: -d true -n 5 -e \n OPTIONS:\n"
-              " -e start-up example \n -d on test failure, exit with stack dump \n"
-              " -f file with csv data \n -h show help \n -n number of nums to keep \n"
-              " -s random number seed \n -S field separator \n -q quit")
+      " -e start-up example \n -d on test failure, exit with stack dump \n"
+      " -f file with csv data \n -h show help \n -n number of nums to keep \n"
+      " -s random number seed \n -S field separator \n -q quit")
 
 run_csv = True
 
@@ -23,5 +23,3 @@ while run_csv:
 
     with open("../config.yml", "w") as config_file:
         config_file.write(yaml.dump(new_configs))
-
-

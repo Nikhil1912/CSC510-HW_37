@@ -1,5 +1,12 @@
 import math
+import re
+import yaml
 from subprocess import call
+
+with open("../config.yml", "r") as config_file:
+    configs = yaml.safe_load(config_file)
+
+passer = ""
 
 
 class TestError(Exception):
@@ -7,11 +14,52 @@ class TestError(Exception):
         self.mess = mess
 
 
-class ProcessCsv:
-    def csv(self, filename, funct):
-        seperator = None
+# class ProcessCsv:
+#    def csv(self, filename, funct):
+#        seperator = None
 
         # TODO
+
+# Call "fun" on each row. Row cells are divided in "the.seperator"
+def csv(fname, fun=None):
+    if(fname == None or len(fname.strip()) == 0):
+        raise Exception("File not found")
+    else:
+        sep = "([^" + configs['the']['separator']+"]+)"
+        with open(fname, 'r') as s:
+            t = []
+            for s1 in s.readlines():
+                t.append(coerce(s1))
+                if fun:
+                    fun(t)
+
+
+def coerce(s):
+    # convert input in the form of a string to appropriate data type int/bool/str
+    def fun(s1):
+        # returns boolean for the string
+        if s == "true":
+            return True
+        elif s == "false":
+            return False
+        return s1
+    # return integer of the number in the form of string or calls fun to return appropriately
+    if re.match(r"^[0-9]+$", s):
+        return int(s)
+    else:
+        return None or fun(s)
+
+
+def fun_the():
+    # create "the" variable and parse through "help" to get the values needed
+    configs['the'] = {}
+    extract = re.findall(r"[-][-]([\S]+)[^\n]+= ([\S]+)", passer)
+    for k, v in extract:
+        configs['the'][k] = coerce(v)
+    return configs['the']
+
+
+configs['the']['separator'] = fun_the()
 
 
 def rnd(x, places=2):
@@ -63,6 +111,3 @@ def cli(args, configs):
         call(["python", "Tests.py"])
 
     return configs
-
-
-

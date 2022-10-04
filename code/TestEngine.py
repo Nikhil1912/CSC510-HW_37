@@ -12,11 +12,13 @@ def test(fn):
     @functools.wraps(fn)
     def wrapper(*args, **kwargs):
         try:
-            return fn(*args,**kwargs)
+            return fn(*args, **kwargs)
         except TestError as te:
             return False
+
     Common.eg[wrapper.__name__] = wrapper
     return wrapper
+
 
 def runs(testName):
     if testName not in Common.eg:
@@ -39,4 +41,6 @@ def runs(testName):
         Common.cfg['the'][k] = v
 
     msg = ("PASS" if out else "FAIL") if status else "CRASH"
+    if testName != 'ALL':
+        testName = testName[3:]
     print("!!!!!!\t" + msg + "\t" + testName + "\t" + str(status))

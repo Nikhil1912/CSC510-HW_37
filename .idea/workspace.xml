@@ -4,14 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="51a57ff1-89d0-4f47-8b94-6031d58c1e95" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/data/auto93.csv" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/code/Cols.py" beforeDir="false" afterPath="$PROJECT_DIR$/code/Cols.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/code/Data.py" beforeDir="false" afterPath="$PROJECT_DIR$/code/Data.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/code/Tests.py" beforeDir="false" afterPath="$PROJECT_DIR$/code/Tests.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/code/Utils.py" beforeDir="false" afterPath="$PROJECT_DIR$/code/Utils.py" afterDir="false" />
-    </list>
+    <list default="true" id="51a57ff1-89d0-4f47-8b94-6031d58c1e95" name="Changes" comment="Implemented eg:data(), fixed a lot of bugs in csv(), data() and cols(), added the auto93.csv file for testing." />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -163,7 +156,14 @@
       <option name="project" value="LOCAL" />
       <updated>1664124451558</updated>
     </task>
-    <option name="localTasksCounter" value="8" />
+    <task id="LOCAL-00008" summary="Implemented eg:data(), fixed a lot of bugs in csv(), data() and cols(), added the auto93.csv file for testing.">
+      <created>1664901482994</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1664901482994</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -189,7 +189,8 @@
     <MESSAGE value="Implemented class Cols and its constructor." />
     <MESSAGE value="Implemented rnd() in Utils.py" />
     <MESSAGE value="Implemented Data::stats()" />
-    <option name="LAST_COMMIT_MESSAGE" value="Implemented Data::stats()" />
+    <MESSAGE value="Implemented eg:data(), fixed a lot of bugs in csv(), data() and cols(), added the auto93.csv file for testing." />
+    <option name="LAST_COMMIT_MESSAGE" value="Implemented eg:data(), fixed a lot of bugs in csv(), data() and cols(), added the auto93.csv file for testing." />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
     <SUITE FILE_PATH="coverage/CSC510_HW_37$Tests.coverage" NAME="Tests Coverage Results" MODIFIED="1664901180698" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/code" />

@@ -6,7 +6,7 @@ from Cols import Cols
 from Row import Row
 from Utils import csv, rnd
 
-with open("../config.yml", 'r') as config_file:
+with open("config.yml", 'r') as config_file:
     cfg = yaml.safe_load(config_file)
 
 

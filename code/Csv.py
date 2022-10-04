@@ -1,7 +1,7 @@
 import yaml
 from Utils import cli
 
-with open("../config.yml", "r") as config_file:
+with open("config.yml", "r") as config_file:
     configs = yaml.safe_load(config_file)
 
 print("Welcome to csv summary!")
@@ -21,5 +21,5 @@ while run_csv:
     csv_args = input("Select an option/s \n")
     new_configs = cli(csv_args, configs)
 
-    with open("../config.yml", "w") as config_file:
+    with open("config.yml", "w") as config_file:
         config_file.write(yaml.dump(new_configs))

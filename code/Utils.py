@@ -2,6 +2,7 @@ import math
 import re
 import yaml
 from subprocess import call
+import Common
 
 with open("../config.yml", "r") as config_file:
     configs = yaml.safe_load(config_file)
@@ -14,22 +15,19 @@ class TestError(Exception):
         self.mess = mess
 
 
-# class ProcessCsv:
-#    def csv(self, filename, funct):
-#        seperator = None
-
-        # TODO
-
 # Call "fun" on each row. Row cells are divided in "the.seperator"
 def csv(fname, fun=None):
-    if(fname == None or len(fname.strip()) == 0):
+    if fname is None or len(fname.strip()) == 0:
         raise Exception("File not found")
     else:
-        sep = "([^" + configs['the']['separator']+"]+)"
+        sep = Common.cfg['the']['separator']
         with open(fname, 'r') as s:
-            t = []
             for s1 in s.readlines():
-                t.append(coerce(s1))
+                t = []
+                csv_row = s1.split(sep)  # Split a row using the separator, here ','
+                csv_row[-1] = csv_row[-1][:-1]  # Removing \n from the end of last element
+                for cell in csv_row:
+                    t.append(coerce(cell))          # Every cell should be type casted
                 if fun:
                     fun(t)
 
@@ -43,11 +41,20 @@ def coerce(s):
         elif s == "false":
             return False
         return s1
+
     # return integer of the number in the form of string or calls fun to return appropriately
-    if re.match(r"^[0-9]+$", s):
-        return int(s)
+    if is_number(s):
+        return float(s)
     else:
         return None or fun(s)
+
+
+def is_number(s):
+    try:
+        float(s)
+        return True
+    except ValueError:
+        return False
 
 
 def fun_the():
@@ -63,7 +70,7 @@ configs['the']['separator'] = fun_the()
 
 
 def rnd(x, places=2):
-    mult = 10**places
+    mult = 10 ** places
     return math.floor(x * mult + 0.5) / mult
 
 

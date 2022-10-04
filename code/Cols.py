@@ -4,7 +4,6 @@ from Num import Num
 import Common
 
 
-
 # Holds summaries of columns
 class Cols:
     def __init__(self, names):
@@ -13,7 +12,7 @@ class Cols:
         self.klass = None  # The single dependent klass column (if it exists)
         self.x = []  # Independent columns
         self.y = []  # Dependent columns
-        for c, s in names:
+        for c, s in enumerate(names):
             if re.match('^[A-Z]+', s):
                 col = Num(c, s)  # Numerics start with uppercase
             else:

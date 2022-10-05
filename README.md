@@ -3,7 +3,7 @@
 <a href="https://github.com/Nikhil1912/CSC510-HW_37/main/LICENSE.md"><img src="https://img.shields.io/github/license/Nikhil1912/CSC510-HW_37?style=plastic" /></a>
 ![GitHub issues](https://img.shields.io/github/issues/Nikhil1912/CSC510-HW_37)
 ![Repo Size](https://img.shields.io/github/repo-size/Nikhil1912/CSC510-HW_37?color=brightgreen)
-[![Python application](https://github.com/Nikhil1912/CSC510-HW_37/actions/workflows/python-app.yml/badge.svg)](https://github.com/Nikhil1912/CSC510-HW_37/actions/workflows/python-app.yml)
+[![Unit tests](https://github.com/Nikhil1912/CSC510-HW_37/actions/workflows/python-app.yml/badge.svg)](https://github.com/Nikhil1912/CSC510-HW_37/actions/workflows/python-app.yml)
 
 ## Objective
 The objective of this repository is to replicate, in python, [this code](https://github.com/txt/se22/blob/main/etc/pdf/csv.pdf), which was originally written in Lua. 

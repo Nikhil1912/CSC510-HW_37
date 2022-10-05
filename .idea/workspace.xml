@@ -4,8 +4,11 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="51a57ff1-89d0-4f47-8b94-6031d58c1e95" name="Changes" comment="Fixed test names in the logs">
-      <change beforePath="$PROJECT_DIR$/code/Tests.py" beforeDir="false" afterPath="$PROJECT_DIR$/code/Tests.py" afterDir="false" />
+    <list default="true" id="51a57ff1-89d0-4f47-8b94-6031d58c1e95" name="Changes" comment="Fixed the output of eg:stats() to look like the sample output">
+      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_rebase_[Changes]/shelved.patch" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_rebase__Changes_.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/requirements.txt" beforeDir="false" afterPath="$PROJECT_DIR$/requirements.txt" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -22,7 +25,7 @@
   <component name="Git.Settings">
     <option name="RECENT_BRANCH_BY_REPOSITORY">
       <map>
-        <entry key="$PROJECT_DIR$" value="main" />
+        <entry key="$PROJECT_DIR$" value="27-eg-stats" />
       </map>
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -56,6 +59,9 @@
     <property name="node.js.selected.package.tslint" value="(autodetect)" />
     <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable" />
   </component>
+  <component name="PyCoverageOptionsProvider">
+    <option name="myUseBundledCoveragePy" value="true" />
+  </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/data" />
@@ -87,6 +93,9 @@
     <recent_temporary>
       <list>
         <item itemvalue="Python.Tests" />
+        <item itemvalue="Python.Tests" />
+        <item itemvalue="Python.Tests" />
+        <item itemvalue="Python.Tests" />
       </list>
     </recent_temporary>
   </component>
@@ -108,6 +117,7 @@
       <workItem from="1664226873115" duration="176000" />
       <workItem from="1664485521596" duration="305000" />
       <workItem from="1664486587354" duration="180000" />
+      <workItem from="1664997420661" duration="664000" />
     </task>
     <task id="LOCAL-00001" summary="Created the Num class and its constructor">
       <created>1662060274456</created>
@@ -211,6 +221,6 @@
     <option name="LAST_COMMIT_MESSAGE" value="Fixed test names in the logs" />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
-    <SUITE FILE_PATH="coverage/CSC510_HW_37$Tests.coverage" NAME="Tests Coverage Results" MODIFIED="1664907740140" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/code" />
+    <SUITE FILE_PATH="coverage/CSC510_HW_37$Tests.coverage" NAME="Tests Coverage Results" MODIFIED="1664997842754" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/code" />
   </component>
 </project>

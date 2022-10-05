@@ -43,3 +43,5 @@ jobs:
     - name: Display coverage report
       run: |
         coverage report
+    - name: Codecov
+      uses: codecov/codecov-actions@v3.1.1

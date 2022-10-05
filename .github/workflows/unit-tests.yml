@@ -37,3 +37,6 @@ jobs:
     - name: Run the tests using the test engine
       run: |
         python code/Tests.py
+    - name: Run code coverage
+      run: |
+        coverage run code/Tests.py

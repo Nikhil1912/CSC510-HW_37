@@ -30,7 +30,7 @@ The output of running `\CSC510-HW_37\code\Tests.py` is shown below:
 ![hw_test](https://user-images.githubusercontent.com/112109564/193937316-195d8279-6969-42ed-87ed-9145cd62c780.PNG)
 
 ## Contributors
-* Abid Naziri
+* M M Abid Naziri
 * Nikhil Mehra
 * Bella Samuelsson
 * Parth Katlana

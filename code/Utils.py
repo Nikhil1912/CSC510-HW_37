@@ -115,6 +115,6 @@ def cli(args, configs):
             exit()
 
     if run_tests:
-        call(["python", "Tests.py"])
+        call(["python", "code/Tests.py"])
 
     return configs

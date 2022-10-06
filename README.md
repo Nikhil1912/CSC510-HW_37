@@ -15,7 +15,7 @@ For an example .csv in the required format, check out `\data\auto93.csv`
 
 ## Running
 * To install necessary packages, run `pip install -r requirements.txt`
-* To run the program, navigate to `\CSC510-HW_37\code` and run `python Csv.py`
+* To run the program, navigate to `\CSC510-HW_37` and run `python code\Csv.py`
 * Tests are contained in `\CSC510-HW_37\code\Tests.py`
 
 Example output is shown below:

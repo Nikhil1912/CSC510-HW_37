@@ -4,6 +4,7 @@
 ![GitHub issues](https://img.shields.io/github/issues/Nikhil1912/CSC510-HW_37)
 ![Repo Size](https://img.shields.io/github/repo-size/Nikhil1912/CSC510-HW_37?color=brightgreen)
 [![Unit tests](https://github.com/Nikhil1912/CSC510-HW_37/actions/workflows/unit-tests.yml/badge.svg)](https://github.com/Nikhil1912/CSC510-HW_37/actions/workflows/unit-tests.yml)
+[![codecov](https://codecov.io/github/Nikhil1912/CSC510-HW_37/branch/main/graph/badge.svg?token=03R0LN63ZO)](https://codecov.io/github/Nikhil1912/CSC510-HW_37)
 
 ## Objective
 The objective of this repository is to replicate, in python, [this code](https://github.com/txt/se22/blob/main/etc/pdf/csv.pdf), which was originally written in Lua. 
